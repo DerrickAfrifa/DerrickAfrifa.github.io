@@ -23,16 +23,28 @@ function collapseMenu(){
 function slideMenu(destination){
 	$("#navBar").animate({
 			marginLeft: destination
-		}, 400, "easeOutCubic",function(){}
-		);
+		}, 400);
 }
 
 //parallax scrolling
-$(document).ready(function(){
-	if (parseInt($("#landingPage").css("width")) > 770) {
-		$.stellar();
-	}
-});
-		
 
+function loadScript(){
+	var isDesktop = (function() {
+  		return !('ontouchstart' in window) 
+  			|| !('onmsgesturechange' in window); 
+ 	})();
+ 
+ 	window.isDesktop = isDesktop;
+ 	if( isDesktop ){
+ 		//var stellarUrl = "siteResponsive/scripts/jquery.stellar.js";
+ 		var migrateuRL = "siteResponsive/scripts/jquery-migrate-3.0.0.js";
+		$.getScript(migrateuRL, function(){console.log("migration success!")}); 	
+		//$.getScript(stellarUrl, function(){console.log("stellar success!")});
+ 	}
+}
+
+loadScript();
+$(document).ready(function(){
+	$.stellar();
+});
 
