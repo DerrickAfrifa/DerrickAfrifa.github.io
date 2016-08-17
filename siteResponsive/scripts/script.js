@@ -1,3 +1,5 @@
+
+
 $("#menu").click(function () {
 	if ($(navBar).css("marginLeft") != "0px") {	
 		slideMenu("0px");
@@ -24,4 +26,11 @@ function slideMenu(destination){
 		}, 400, "easeOutCubic",function(){}
 		);
 }
+
+//parallax scrolling
+$(document).ready(function(){
+	$.stellar();
+});
+		
+
 
