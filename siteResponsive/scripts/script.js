@@ -29,7 +29,9 @@ function slideMenu(destination){
 
 //parallax scrolling
 $(document).ready(function(){
-	$.stellar();
+	if (parseInt($("#landingPage").css("width")) > 770) {
+		$.stellar();
+	}
 });
 		
 
