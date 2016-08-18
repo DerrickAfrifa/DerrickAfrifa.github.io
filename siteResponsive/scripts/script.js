@@ -28,19 +28,22 @@ function slideMenu(destination){
 
 //parallax scrolling
 
-function loadScript(){
+function initialiseStellar(){
 	var isDesktop = (function() {
   		return !('ontouchstart' in window) 
   			|| !('onmsgesturechange' in window); 
  	})();
  
  	window.isDesktop = isDesktop;
- 	if( isDesktop ){
+ 	if( isDesktop && parseInt($("#landingPage").css("width"),10) > 750){
+ 		console.log("stellar initialised");
  		$.stellar();
+ 	}else{
+ 		console.log("stellar not initialised");
  	}
 }
 
 $(document).ready(function(){
-	loadScript();
+	initialiseStellar();
 });
 
