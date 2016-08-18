@@ -36,15 +36,11 @@ function loadScript(){
  
  	window.isDesktop = isDesktop;
  	if( isDesktop ){
- 		//var stellarUrl = "siteResponsive/scripts/jquery.stellar.js";
- 		var migrateuRL = "siteResponsive/scripts/jquery-migrate-3.0.0.js";
-		$.getScript(migrateuRL, function(){console.log("migration success!")}); 	
-		//$.getScript(stellarUrl, function(){console.log("stellar success!")});
+ 		$.stellar();
  	}
 }
 
-loadScript();
 $(document).ready(function(){
-	$.stellar();
+	loadScript();
 });
 
