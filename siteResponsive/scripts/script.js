@@ -27,7 +27,6 @@ function slideMenu(destination){
 }
 
 //parallax scrolling
-
 function initialiseStellar(){
 	var isDesktop = (function() {
   		return !('ontouchstart' in window) 
@@ -45,5 +44,32 @@ function initialiseStellar(){
 
 $(document).ready(function(){
 	initialiseStellar();
+	$("h1").stellar();
+	animateIcons();
+	$(window).bind("scroll", scrollOpacityEffect);
 });
 
+//animate icons on landing page
+function iconEntered(){
+	$(this).css("fontSize", "35px");
+}	
+
+function iconExited(){
+	$(this).css("fontSize", "30px");
+}
+
+function animateIcons(){
+	$(".sMedia").hover(iconEntered, iconExited);
+}
+
+var startOffset = parseInt( $("h1").offset()["top"],10);
+
+function scrollOpacityEffect(){
+	var currentOffset = parseInt($(window).scrollTop(), 10);
+	var adjustment = 0.8;
+	var opacity = (startOffset - currentOffset)/startOffset;
+	(opacity === 1) ? opacity : opacity*=adjustment;
+	if(opacity >= 0){
+		$("h1").css("opacity", opacity);
+	}
+}
