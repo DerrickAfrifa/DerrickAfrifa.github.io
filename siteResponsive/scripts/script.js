@@ -1,4 +1,4 @@
-
+$("#navBar").hide();
 
 $("#menu").click(function () {
 	if ($(navBar).css("marginLeft") != "0px") {	
@@ -47,6 +47,7 @@ $(document).ready(function(){
 	$("h1").stellar();
 	animateIcons();
 	$(window).bind("scroll", scrollOpacityEffect);
+	$(window).bind("scroll", toggleNavBar);
 });
 
 //animate icons on landing page
@@ -62,8 +63,18 @@ function animateIcons(){
 	$(".sMedia").hover(iconEntered, iconExited);
 }
 
-var startOffset = parseInt( $("h1").offset()["top"],10);
 
+//menu bar slide down
+function toggleNavBar(){
+	if(parseInt($(window).scrollTop(), 15) > 50){
+		$("#navBar").slideDown(500);
+	}else{
+		$("#navBar").slideUp(300);
+	}
+}
+
+//fade text opacity
+var startOffset = parseInt( $("h1").offset()["top"],10);
 function scrollOpacityEffect(){
 	var currentOffset = parseInt($(window).scrollTop(), 10);
 	var adjustment = 0.8;
@@ -73,3 +84,5 @@ function scrollOpacityEffect(){
 		$("h1").css("opacity", opacity);
 	}
 }
+
+//checking if dropdown worked
