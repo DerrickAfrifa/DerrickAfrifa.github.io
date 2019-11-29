@@ -5,3 +5,24 @@
 #github-link {
 	margin-right: 2em;
 }
+
+/*large screens*/
+@media (min-width: 992px) {
+	#main-name {
+		font-size: 2rem;
+		padding-top: 50%;
+	}	
+
+	#jumbotron-container {
+		text-align: center;
+	}
+
+	#name-panel {
+		height: 100vh;
+	}
+
+	#name-jumbotron{
+		height: 100vh;
+		border-radius: 0;
+	}
+}
