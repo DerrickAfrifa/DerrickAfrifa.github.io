@@ -1,9 +1,10 @@
 .fab {
 	font-size: 2em;
+	margin-right: 2em;
 }
 
-#github-link {
-	margin-right: 2em;
+.far {
+	font-size: 2em;
 }
 
 /*large screens*/
