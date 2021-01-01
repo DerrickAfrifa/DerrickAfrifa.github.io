@@ -1,32 +1,36 @@
 .fab {
-	font-size: 2em;
-	margin-right: 2em;
+  font-size: 2em;
+  margin-right: 2em;
 }
 
 .far {
-	font-size: 2em;
+  font-size: 2em;
 }
 
 /*large screens*/
 @media (min-width: 992px) {
-	#main-name {
-		font-size: 2rem;
-		padding-top: 50%;
-	}	
+  #main-name {
+    font-size: 2rem;
+    padding-top: 50%;
+  }
 
-	#name-panel {
-		height: 100vh;
-	}
+  #name-panel {
+    height: 100vh;
+  }
 
-	#content-panel {
-		margin-top: 0 !important; 
-		height: 100vh;
-		overflow-y: scroll;
-		padding-top: 15%;
-	}
+  #content-panel {
+    margin-top: 0 !important;
+    height: 100vh;
+    overflow-y: scroll;
+    padding-top: 15%;
+  }
 
-	#name-jumbotron{
-		height: 100vh;
-		border-radius: 0;
-	}
+  #name-jumbotron {
+    height: 100vh;
+    border-radius: 0;
+  }
+
+  .second-row-col {
+    margin-top: 2rem;
+  }
 }
