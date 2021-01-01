@@ -7,6 +7,18 @@
   font-size: 2em;
 }
 
+#name-jumbotron {
+  height: 100vh;
+}
+
+@media (max-width: 990px) {
+  #outside-container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+}
+
 /*large screens*/
 @media (min-width: 992px) {
   #main-name {
@@ -28,9 +40,5 @@
   #name-jumbotron {
     height: 100vh;
     border-radius: 0;
-  }
-
-  .second-row-col {
-    margin-top: 2rem;
   }
 }
